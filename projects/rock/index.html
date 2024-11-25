@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROCK</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="gsection">
+        <!-- <div class="tsection"> -->
+        <div class="titlebox">
+            <div class="title">
+                <h1 class="rock">ROCK</h1>
+                <h1 class="PAPER">PAPER</h1>
+                <h1 class="SICSSOR">SICSSOR</h1>
+            </div>
+            <div id="Cscore-box">
+                <p id="score-label">COMPUTER SCORE</p>
+                <p id="Cscore-value" class="Cscorevalue">0</p>
+            </div>
+            <div id="Yscore-box">
+                <p id="score-label">YOUR SCORE</p>
+                <p id="score-value" class="scorevalue">0</p>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div id="triangle">
+            <div id="rock" class="circle small rock">
+                <div class="symbol"></div>
+            </div>
+            <div id="paper" class="circle small paper">
+                <div class="symbol"></div>
+            </div>
+            <div id="scissors" class="circle small scissors">
+                <div class="symbol"></div>
+            </div>
+        </div>
+
+        <div id="house">
+            <div id="player-pick-container">
+                <p class="player-picked-text">you picked</p>
+                <div id="player-selection" class="circle large">
+                    <div class="symbol"></div>
+                </div>
+            </div>
+
+            <div id="house-pick-container">
+                <p class="house-picked-text">the house picked</p>
+                <div id="placeholder"></div>
+                <div id="house-selection" class="circle large">
+                    <div class="symbol"></div>
+                </div>
+            </div>
+        </div>
+        <p id="win-text">you win</p>
+        <p id="lose-text">you lose</p>
+        <p id="draw-text">draw</p>
+
+        <div id="play-again-button">
+            <p class="play-again-text">play again</p>
+        </div>
+    </div>
+    <div id="btn">
+        <div id="rules-button" class="button">
+            <p class="button-text">rules</p>
+        </div>
+        <div id="next" class="next">
+            <p class="next-text">next</p>
+            <img id="star" src=".\images\star.png" alt="star" />
+            <img id="trop" src=".\images\trophy.png" alt="trophy" />
+            <h1>HURRAY !!</h1>
+            <H2>YOU WON THE GAME</H2>
+        </div>
+    </div>
+
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <img id="close-icon" src=".\images\close button.png" alt="close" />
+            <img id="rules-image" src=".\images\Screenshot 2024-11-23 191041.png" alt="rules" />
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(131, 84%, 51%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600px;
+    font-size: 10px;
+    color: hsl(100, 100%, 100%);
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+}
+
+.gsection {
+    width: 75vw;
+    min-height: 653px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.titlebox {
+    height: 80px;
+    background-color: aquamarine;
+    width: 55vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: normal;
+    border: 5px solid orangered;
+    border-radius: 10px;
+}
+
+div#Cscore-box {
+    height: auto;
+    width: 70px;
+    background-color: bisque;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#Yscore-box {
+    height: auto;
+    width: 70px;
+    background-color: bisque;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Cscore-value {
+    height: 50px;
+    font-size: xxx-large;
+}
+
+p#score-value {
+    font-size: xxx-large;
+}
+
+p.scorevalue {
+    position: relative;
+    bottom: 1px;
+    top: 10px;
+}
+
+div#triangle {
+    height: 415px;
+    width: 400px;
+    background-color: #d2c9c9;
+    background-image: url(/projects/rock/images/triangle.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 500px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.small,
+.large {
+    width: 130px;
+    height: 127px;
+    border: 15px solid;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.circle {
+    border-radius: 100%;
+    background: linear-gradient(hsl(0, 0%, 95.3%), hsl(0, 0%, 85.5%));
+}
+
+.small.rock,
+.large.rock {
+    border-color: hsl(229, 89%, 65%);
+    box-shadow: 0 6px 0 0 hsl(229, 67%, 46%), 0 5px 0 0 hsl(228, 23.2%, 78%) inset, 0 9px 3px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.small.paper,
+.large.paper {
+    border-color: hsl(349, 71%, 55%);
+    box-shadow: 0 6px 0 0 hsl(346, 83%, 34%), 0 5px 0 0 hsl(228, 23.2%, 78%) inset, 0 9px 3px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.small.scissors,
+.large.scissors {
+    border-color: hsl(41, 85%, 51%);
+    box-shadow: 0 6px 0 0 hsl(28, 76.1%, 44.3%), 0 5px 0 0 hsl(228, 23.2%, 78%) inset, 0 9px 3px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+div#scissors {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+
+div#paper {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: flex-end;
+}
+
+div#rock {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: flex-start;
+}
+
+div#rock.circle.small.rock,
+.large.rock {
+    background-image: url(./images/rock.jpeg);
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+}
+
+div#paper.circle.small.paper,
+.large.paper {
+    background-image: url(./images/paper.png);
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+}
+
+div#scissors.small.scissors,
+.large.scissors {
+    background-image: url(./images/scissor.png);
+    background-color: rgb(244, 249, 249);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85px;
+}
+
+#house {
+    display: none;
+    justify-content: space-around;
+    height: 200px;
+    width: 500px;
+}
+
+#player-pick-container {
+    width: 130px;
+    left: 29px;
+}
+
+#house-pick-container {
+    width: 145px;
+    left: 209px;
+}
+
+#player-pick-container,
+#house-pick-container {
+    display: none;
+    height: 182px;
+    animation: appear 0.3s linear both;
+}
+
+#house-selection {
+    left: 8px;
+    display: none;
+}
+
+#placeholder {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    position: absolute;
+    top: 11px;
+    left: 17px;
+    display: block;
+    animation: pulse 0.3s both infinite alternate;
+}
+
+.symbol {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    pointer-events: none;
+}
+
+#win-text {
+    width: 195px;
+    left: 90px;
+}
+
+#lose-text {
+    width: 220px;
+    left: 78px;
+}
+
+#draw-text {
+    width: 135px;
+    left: 125px;
+}
+
+#win-text,
+#lose-text,
+#draw-text {
+    height: 67px;
+    font-size: 56px;
+    display: none;
+}
+
+#play-again-button {
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    background: hsl(131, 84%, 51%);
+    color: hsl(0, 0, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
+    display: none;
+}
+
+.play-again-text {
+    width: 220px;
+    height: 48px;
+    letter-spacing: 2.5px;
+    position: relative;
+    top: 15px;
+    pointer-events: none;
+}
+
+#btn {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#rules-button {
+    grid-column: 3 / 4;
+
+}
+
+.button {
+    width: 128px;
+    height: 40px;
+    margin: auto;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-text {
+    width: 55px;
+    height: 19px;
+    letter-spacing: 2.5px;
+    position: absolute;
+    top: 10px;
+    left: 36px;
+    pointer-events: none;
+}
+
+.modal {
+    display:none;
+    position: absolute;
+    z-index: 1;
+    top: 400px;
+    left: 230px;
+    width: 100%;
+    height: 100%
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 55px;
+    animation-name: animateleft;
+    animation-duration: 0.4s;
+}
+
+#rules-image {
+    width: auto;
+    height: 200px;
+    margin: auto;
+    display:block;
+}
+
+#close-icon {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    display: block;
+}
+
+#next {
+    grid-column: 4 / 4;
+}
+
+.next {
+    display: none;
+    width: 128px;
+    height: 40px;
+    margin: auto;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.next-text {
+    width: 55px;
+    height: 19px;
+    letter-spacing: 2.5px;
+    position: absolute;
+    top: 10px;
+    left: 36px;
+    pointer-events: none;
+}
